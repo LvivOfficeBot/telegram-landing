@@ -23,44 +23,97 @@
   <!-- End Meta Pixel Code -->
 
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f0f8ff;
-      text-align: center;
+  body {
+    background: #121212;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 15px;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .offer-container {
+    background: rgba(255, 106, 0, 0.15);
+    border-radius: 15px;
+    padding: 20px 25px;
+    max-width: 100%;
+    box-shadow: 0 0 20px rgba(255, 106, 0, 0.6);
+    margin-bottom: 30px;
+  }
+  .offer-container h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #ff6a00;
+    text-shadow: 0 0 6px #ff6a00;
+  }
+  .offer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .offer-list li {
+    margin-bottom: 10px;
+  }
+  .pulse-button {
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    border: none;
+    border-radius: 35px;
+    color: white;
+    font-size: 20px;
+    padding: 18px 45px;
+    cursor: pointer;
+    box-shadow: 0 0 12px #ff6a00;
+    animation: pulse 2s infinite;
+    transition: box-shadow 0.3s ease;
+    width: 90%;
+    max-width: 320px;
+  }
+  .pulse-button:hover,
+  .pulse-button:focus {
+    box-shadow: 0 0 30px #ee0979, 0 0 50px #ff6a00;
+    outline: none;
+  }
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 12px #ff6a00;
+      transform: scale(1);
     }
-    .container {
-      padding-top: 100px;
+    50% {
+      box-shadow: 0 0 30px #ff6a00, 0 0 50px #ee0979;
+      transform: scale(1.06);
     }
-    h1 {
-      font-size: 32px;
-      color: #333;
-      margin-bottom: 30px;
+    100% {
+      box-shadow: 0 0 12px #ff6a00;
+      transform: scale(1);
     }
-    .btn {
-      background-color: #0088cc;
-      color: white;
-      padding: 20px 40px;
-      font-size: 20px;
-      text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-    }
-    .btn:hover {
-      background-color: #0077b3;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>Щоб подати заявку — перейдіть у Telegram</h1>
-    <a class="btn"
-       href="https://t.me/office_lv_hr_bot"
-       target="_blank"
-       onclick="fbq('track', 'Lead');">
-       Перейти до бота
-    </a>
-  </div>
+
+<div class="offer-container">
+  <h2>Вигідна пропозиція для тебе</h2>
+  <ul class="offer-list">
+    <li>Ставка: 800-1200 грн</li>
+    <li>Процент: 10-20%</li>
+    <li>Графік: з 11:00 до 20:00</li>
+    <li>Виплата ставки 2 рази на місяць</li>
+    <li>Бонуси кожну п’ятницю</li>
+    <li>Комфортний офіс</li>
+    <li>Кава та солодощі у вільному доступі</li>
+    <li>Тільки офісний формат роботи</li>
+  </ul>
+</div>
+
+<button class="pulse-button" onclick="location.href='https://t.me/office_lv_hr_bot'">
+  Перейти до бота
+</button>
+
 </body>
 </html>
